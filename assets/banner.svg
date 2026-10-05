@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22c55e"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#1f2937" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="300" rx="16" fill="url(#bg)"/>
+  <rect width="1200" height="300" rx="16" fill="url(#grid)" opacity="0.6"/>
+
+  <!-- left: claim -> evidence -> verdict -->
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15">
+    <rect x="760" y="70" width="380" height="160" rx="10" fill="#0f172a" stroke="#334155"/>
+    <circle cx="782" cy="90" r="5" fill="#ef4444"/>
+    <circle cx="800" cy="90" r="5" fill="#f59e0b"/>
+    <circle cx="818" cy="90" r="5" fill="#22c55e"/>
+    <text x="784" y="128" fill="#94a3b8">claim    <tspan fill="#e2e8f0">"this is safe"</tspan></text>
+    <text x="784" y="156" fill="#94a3b8">evidence <tspan fill="#38bdf8">src/agent.py:42</tspan></text>
+    <text x="784" y="184" fill="#94a3b8">verify   <tspan fill="#e2e8f0">54 tests passed</tspan></text>
+    <text x="784" y="212" fill="#22c55e">✓ verdict: proven</text>
+  </g>
+
+  <g font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">
+    <text x="64" y="120" fill="#f8fafc" font-size="56" font-weight="800">Evidence-First AI</text>
+    <rect x="66" y="140" width="220" height="4" rx="2" fill="url(#accent)"/>
+    <text x="64" y="190" fill="#cbd5e1" font-size="24">Claims are cheap. Evidence is not.</text>
+    <text x="64" y="228" fill="#64748b" font-size="17">Tools that make AI prove what it says — in review and in CI.</text>
+  </g>
+</svg>
